@@ -1,0 +1,19 @@
+<h1>Lista de Usuarios</h1>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Mas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td scope="row">{{usuario.id}}</td>
+      <td scope="row">{{usuario.nombre}}</td>
+      <td scope="row">{{usuario.edad}}</td>
+      <td scope="row"><a [routerLink]="['/usuario', usuario.id]">Más...</a></td>
+    </tr>
+  </tbody>
+</table>
